@@ -14791,9 +14791,9 @@ a:hover .willway-border {
 }
 
 .jumplinks {
-    background-color: var(--surfaces-surface-container);
+    background-color: #7C3DA1;
     border: 1px solid var(--states-tonal-hovered);
-    box-shadow: none;
+    /* box-shadow: none; */
     overflow: hidden;
     padding: 0;
     top: calc(var(--header-height-scrolled) + var(--spacer-2))
@@ -14836,8 +14836,8 @@ a:hover .willway-border {
 }
 
 .jumplinks--static {
-    position: relative;
-    top: 0
+    position: sticky;
+    top: 15px;
 }
 
 .gdm-modal .jumplinks {

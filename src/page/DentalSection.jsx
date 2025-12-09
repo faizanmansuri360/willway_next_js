@@ -40,7 +40,7 @@ const DentalSection = () => {
                                     <gdm-video-embed
                                         className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item2.id}>
                                         <ReactPlayer
-                                            url={item2.video_url}
+                                            url={item2.video_file.path}
                                             playing
                                             className="gdm-video-embed__player"
                                             muted
@@ -85,7 +85,7 @@ const DentalSection = () => {
                                     <gdm-video-embed
                                         className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item3.id}>
                                         <ReactPlayer
-                                            url={item3.video_url}
+                                            url={item3.video_file.path}
                                             playing
                                             className="gdm-video-embed__player"
                                             muted
@@ -128,7 +128,7 @@ const DentalSection = () => {
                                     <gdm-video-embed
                                         className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item4.id}>
                                         <ReactPlayer
-                                            url={item4.video_url}
+                                            url={item4.video_file.path}
                                             playing
                                             className="gdm-video-embed__player"
                                             muted
@@ -165,11 +165,8 @@ const DentalSection = () => {
                                 </figure>
                             )}
                         </div>
-
-
                     </div>
                 </div>
-
                 <div className="glue-carousel__navigation" aria-label="Choose item to display"></div>
             </gdm-carousel>
         </>

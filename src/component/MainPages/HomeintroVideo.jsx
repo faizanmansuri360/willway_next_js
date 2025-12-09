@@ -1,15 +1,24 @@
 "use client";
-// import frame from '../../../public/static/video/frame.mp4';
-import { selectAllVideos } from '../../store/videoSlice';
-import { useSelector } from 'react-redux';
+import { selectAllVideos, fetchAllVideos } from '../../store/videoSlice';
+import { useSelector, useDispatch } from 'react-redux';
 import ReactPlayer from 'react-player';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
 
 const HomeintroVideo = () => {
     const video = useSelector(selectAllVideos);
-    const item1 = "http://myfurixbackend.local//storage//app//uploads//public//68d//bfc//b00//68dbfcb00590b969480264.mp4";
+    const dispatch = useDispatch();
+    const item1 = video.find((v) => v.id === 1);
     const [muted, setMuted] = useState(true);
+
+    useEffect(() => {
+        dispatch(fetchAllVideos());
+    }, [dispatch]);
+
+    if (!item1?.video_file?.path) {
+        console.log("Video not loaded yet...");
+        return null; // prevent flicker
+    }
+
     return (
         <article>
             <div className="glue-page bookmark">
@@ -24,21 +33,34 @@ const HomeintroVideo = () => {
                     <div
                         className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height willway-page-cover__background willway-page-cover__background--video"
                         data-autoplay="true">
-                       {item1 && (
+                        {/* {item1 && (
                             <ReactPlayer
                                 url={item1}
-                                playing
-                               
+                                playing={false}
                                 key={item1.id}
                                 loop
                                 width="1920"
                                 height="100%"
                                 playsinline
                             />
-                        )}
-                        
+                        )} */}
+
+                        <video
+                            src="/static/video/frame.mp4"
+                            autoPlay
+                            loop
+                            muted={muted}
+                            playsInline
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                            }}
+                        />
+
                         <div className="gdm-video-embed__controls">
-                            <button className="glue-button glue-button--low-emphasis gdm-video-embed__play-toggle"
+                            <button
+                                className="glue-button glue-button--low-emphasis gdm-video-embed__play-toggle"
                                 onClick={() => setMuted(!muted)}
                             >
                                 {muted ? "🔇 Unmute" : "🔊 Mute"}

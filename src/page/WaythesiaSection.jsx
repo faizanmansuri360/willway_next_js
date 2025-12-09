@@ -8,14 +8,15 @@ import Collapse from 'react-bootstrap/Collapse';
 
 const WaythesiaSection = () => {
     const video = useSelector(selectAllVideos);
+    console.log(video);
+    
     const [open, setOpen] = useState(false)
     return (
         <>
-
             <div className="section-title section-title--large">
                 <h2 className="glue-headline glue-headline--headline-2 section-title__title" >Waythesia WVA-100</h2>
                 <div className="glue-headline glue-headline--headline-4 section-title__description" >
-                    <p data-block-key="k18ck">Willway Anesthesia Machine Care.</p>
+                    <p>Willway Anesthesia Machine Care.</p>
                 </div>
             </div>
             {video
@@ -23,14 +24,14 @@ const WaythesiaSection = () => {
                 .map((item) => (
                     <figure className="single-media single-media--fullbleed" key={item.id}>
                         <div className="single-media__media">
-                            <gdm-video-embed className="gdm-video-embed gdm-video-embed--muted"
+                            <div className="gdm-video-embed gdm-video-embed--muted"
                                 data-autoplay="true" >
                                 <picture className="picture gdm-video-embed__poster" aria-hidden="true">
                                     <img alt="" className="picture__image" height="810" role="presentation"
                                         src={item.video_url}
                                         width="1440" />
                                 </picture>
-                                <ReactPlayer
+                                {/* <ReactPlayer
                                     className="gdm-video-embed__player"
                                     url={item.video_url}
                                     playing
@@ -39,8 +40,22 @@ const WaythesiaSection = () => {
                                     width="100%"
                                     height="100%"
                                     playsinline
+                                /> */}
+
+                                <video
+                                    src={item.video_file.path}
+                                    className="gdm-video-embed__player"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover",
+                                    }}
                                 />
-                            </gdm-video-embed>
+                            </div>
                         </div>
 
                         <figcaption className="caption">
@@ -60,7 +75,7 @@ const WaythesiaSection = () => {
                                     <Collapse in={open}>
                                         <div id="example-collapse-text" className="caption__text glue-caption">
                                             <div>
-                                                 {item.description}
+                                                {item.description}
                                             </div>
                                         </div>
                                     </Collapse>

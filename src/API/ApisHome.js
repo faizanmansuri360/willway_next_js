@@ -1,3 +1,5 @@
+"use client";
+
 import server from "../env.js";
 import axios from "axios";
 
@@ -187,6 +189,7 @@ export function ProductVideos() {
                 throw new Error('Network response was not ok');
             }
             const productcategory = await response.json();
+            console.log("productcategory----", productcategory);
             resolve({ productcategory });
         } catch (error) {
             console.error('Error :', error);

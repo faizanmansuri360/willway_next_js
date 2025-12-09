@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Providers from "./Providers.jsx";
 import "@/styles/willwayone.css";
 import "@/styles/willwaytwo.css";
 import "@/styles/willwaythree.css";
+import Providers from "./Providers.jsx";
 import Header from "@/common/header/Header";
 import Footer from "@/common/footer/Footer";
 
@@ -38,7 +38,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="bubbles_wrap">
           <div className="bubble x1"></div>
@@ -54,7 +53,6 @@ export default function RootLayout({ children }) {
         </div>
         <Providers >
           <Header />
-          <ScriptLoader />
           {children}
           <Footer />
         </Providers>

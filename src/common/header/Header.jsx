@@ -28,7 +28,10 @@ const Header = () => {
       setCategories(res.Categories || []);
     });
   }, []);
-  
+
+  console.log(categories, 'categoriescategoriescategories');
+
+
 
   const handleMouseEnter = () => {
 
@@ -86,7 +89,6 @@ const Header = () => {
                         data-event-io="nav_select" >
 
                         <div className="icon">
-
                           <picture className="picture">
                             <img alt="" className="picture__image" height="18" loading="lazy"
                               src={product.image} width="18" />
@@ -95,9 +97,8 @@ const Header = () => {
 
                         <div className="label">
                           <Link className="gdm-text-call-to-action--nav" href={`/products-details/${product.product_details_id}`}>{product.name}</Link>
-
-                          
                         </div>
+
                       </div>
                     </div>
                   ))}
@@ -231,7 +232,7 @@ const Header = () => {
               <div className="site-switcher">
                 <div className="site-switcher__bar">
                   <div className="site-switcher__home" >
-                    <Link className="site-switcher__title" href={"/"}><Image src={willwayLogo}  alt="Willway Logo" priority/></Link>
+                    <Link className="site-switcher__title" href={"/"}><Image src={willwayLogo} alt="Willway Logo" priority /></Link>
                   </div>
                 </div>
               </div>
