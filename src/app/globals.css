@@ -363,11 +363,11 @@ a.list-group-item.list-group-item-action {
 
 .collaps_btn {
     appearance: none !important;
-    background: var(--surfaces-surface-container) !important;
-    border: 1px solid var(--surfaces-surface) !important;
+    background: #7c3da1 !important;
+    border: 1px solid #ffffff !important;
     border-radius: 100% !important;
-    color: var(--surfaces-on-surface-variant) !important;
-    height: var(--spacer-3) !important;
+    color: #9aa0a6 !important;
+    height: 24px !important;
     line-height: 100% !important;
     margin-inline-start: 4px !important;
     outline: 0 !important;
@@ -375,7 +375,7 @@ a.list-group-item.list-group-item-action {
     text-align: center !important;
     user-select: none !important;
     vertical-align: middle !important;
-    width: var(--spacer-3) !important
+    width: 24px !important;
 }
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.glue-expansion-panel.flex-font.css-1pug5wj {
@@ -409,4 +409,44 @@ a.list-group-item.list-group-item-action {
 
 
 
+
+.willway-large-text__headline.glue-headline.glue-headline--headline-2 {
+    background: var(--roles-primary-gradient);
+    background-image: linear-gradient(90deg, rgb(251, 188, 4) 35%, rgb(255, 144, 42) 90%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-clip: text;
+    color: var(--surfaces-on-surface);
+    margin-bottom: -2em;
+    padding-bottom: 2em;
+    position: relative;
+    text-align: center;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+  color: #7c3da1 !important;
+}
+
+/* Custom arrows using Unicode icons */
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+}
 

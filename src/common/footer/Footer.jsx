@@ -1,7 +1,6 @@
 import React from "react"
-import footorlogo from '../../assets/willwayWhite.png'
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import whiteLogo from "../../assets/willwayWhite.png";
+import whiteLogo from "../../../public/assets/willwayWhite.png";
 import Link from "next/link";
 
 const Footer = () => {

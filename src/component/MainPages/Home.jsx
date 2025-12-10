@@ -2,14 +2,14 @@
 import HomeintroVideo from './HomeintroVideo';
 import DentalSection from '@/page/DentalSection';
 import PumpSection from '@/page/PumpSection';
-import Commitment from '@/assets/Commitment.png';
+
 import WaythesiaSection from '@/page/WaythesiaSection';
 import { selectAllVideos } from '@/store/videoSlice';
 import { useSelector } from 'react-redux';
 import ReactPlayer from 'react-player';
-import card1 from '@/assets/svg_1.png';
-import card2 from '@/assets/svg_2.png';
-import card3 from '@/assets/svg_3.png';
+import card1 from '../../../public/assets/svg_1.png';
+import card2 from '../../../public/assets/svg_2.png';
+import card3 from '../../../public/assets/svg_3.png';
 
 const Home = () => {
     const video = useSelector(selectAllVideos);
@@ -82,7 +82,7 @@ const Home = () => {
                             className="picture page-cover__media page-cover__image glue-grid__col glue-grid__col--span-12 glue-grid__col--span-12-md">
 
                             <img alt="" className="picture__image" height="1080" role="presentation"
-                                src={Commitment}
+                                src="/assets/Commitment.png"
                                 width="1296" />
                         </picture>
 
@@ -97,7 +97,7 @@ const Home = () => {
 
                         <h2 className="glue-headline glue-headline--headline-2 section-title__title" >Advanced Veterinary Solutions from Willway</h2>
                         <div className="glue-headline glue-headline--headline-4 section-title__description" >
-                            <p data-block-key="qhc5b">Delivering greater precision, reliability, and care for every patient</p>
+                            <p >Delivering greater precision, reliability, and care for every patient</p>
                         </div>
 
                     </div>
@@ -121,15 +121,15 @@ const Home = () => {
                         <div className="single-media__media">
                             {item1 && (
                                 <div className="gdm-video-embed gdm-video-embed--muted" key={item1.id}>
-                                    <ReactPlayer
-                                        url={item1.video_url}
-                                        playing
+                                    <video
+                                        src={item1.video_file.path}
+                                        autoPlay
                                         className="gdm-video-embed__player"
-                                        muted
                                         loop
+                                        muted
+                                        playsInline
                                         width="1920"
                                         height="1080"
-                                        playsinline
                                     />
                                 </div>
                             )}
@@ -180,16 +180,16 @@ const Home = () => {
                                         <div className="glue-card__inner">
                                             <picture className="picture glue-card__asset">
                                                 <img alt="" className="picture__image" height="540" loading="lazy" role="presentation"
-                                                    src={card1} width="960" />
+                                                    src="/assets/svg_1.png"  width="960" />
                                             </picture>
                                             <div className="glue-card__content">
                                                 <p className="glue-headline glue-headline--headline-5">Advanced Anesthesia Solutions</p>
                                                 <div className="glue-card__description">
-                                                    <p data-block-key="zx4is">Willway anesthesia machines are trusted in modern animal hospitals, integrating ventilators and touchscreen monitoring to streamline surgical workflows and ensure patient safety.</p>
+                                                    <p >Willway anesthesia machines are trusted in modern animal hospitals, integrating ventilators and touchscreen monitoring to streamline surgical workflows and ensure patient safety.</p>
                                                 </div>
                                             </div>
-                                            
-                                            
+
+
                                         </div>
                                     </div>
                                 </li>
@@ -199,16 +199,16 @@ const Home = () => {
                                         <div className="glue-card__inner">
                                             <picture className="picture glue-card__asset">
                                                 <img alt="" className="picture__image" height="540" loading="lazy" role="presentation"
-                                                    src={card2} width="960" />
+                                                    src="/assets/svg_2.png" width="960" />
                                             </picture>
                                             <div className="glue-card__content">
                                                 <p className="glue-headline glue-headline--headline-5">Precision Surgical Tools</p>
                                                 <div className="glue-card__description">
-                                                    <p data-block-key="zx4is">Veterinary surgeons rely on Willway's ultrasonic scalpels and electrosurgical units for minimal invasive procedures, reducing operation time and improving recovery.</p>
+                                                    <p >Veterinary surgeons rely on Willway's ultrasonic scalpels and electrosurgical units for minimal invasive procedures, reducing operation time and improving recovery.</p>
                                                 </div>
                                             </div>
-                                            
-                                            
+
+
                                         </div>
                                     </div>
                                 </li>
@@ -218,16 +218,16 @@ const Home = () => {
                                         <div className="glue-card__inner">
                                             <picture className="picture glue-card__asset">
                                                 <img alt="" className="picture__image" loading="lazy"
-                                                    src={card3} />
+                                                    src="/assets/svg_3.png" />
                                             </picture>
                                             <div className="glue-card__content">
                                                 <p className="glue-headline glue-headline--headline-5">Comprehensive Diagnostic Systems</p>
                                                 <div className="glue-card__description">
-                                                    <p data-block-key="zx4is">From digital microscopy to biochemistry analyzers, Willway provides accurate and rapid diagnostic solutions that support effective treatment plans for a range of animals.</p>
+                                                    <p >From digital microscopy to biochemistry analyzers, Willway provides accurate and rapid diagnostic solutions that support effective treatment plans for a range of animals.</p>
                                                 </div>
                                             </div>
-                                            
-                                            
+
+
                                         </div>
                                     </div>
                                 </li>

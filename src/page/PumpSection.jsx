@@ -2,6 +2,8 @@
 import { useSelector } from 'react-redux';
 import ReactPlayer from 'react-player';
 import { selectAllVideos } from '../store/videoSlice';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 const PumpSection = () => {
     const video = useSelector(selectAllVideos);
@@ -19,7 +21,7 @@ const PumpSection = () => {
                     </div>
                 </div>
 
-                <gdm-carousel className="glue-carousel carousel">
+                <div className="glue-carousel carousel">
                     <div className="carousel__button-wrapper">
                         <button className="glue-carousel__button glue-carousel__button--prev">
 
@@ -37,60 +39,84 @@ const PumpSection = () => {
 
                     <div className="glue-carousel__viewport">
                         <div className="glue-carousel__list">
-                            <div className="glue-carousel__item">
-                                {item1 && (
-                                    <figure>
-                                        <gdm-video-embed
-                                            className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item1.id}>
-                                            <ReactPlayer
-                                                url={item1.video_url}
-                                                playing
-                                                className="gdm-video-embed__player"
-                                                muted
-                                                loop
-                                                width="1920"
-                                                height="1080"
-                                                playsinline
-                                            />
-                                        </gdm-video-embed>
-                                        <figcaption className="caption">
-                                            <div className="caption__text glue-caption">
-                                                <p><strong>{item1.title} :</strong> {item1.description}</p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                )}
-                            </div>
 
-                            <div className="glue-carousel__item">
-                                {item2 && (
-                                    <figure >
-                                        <gdm-video-embed
-                                            className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item2.id}>
-                                            <ReactPlayer
-                                                url={item2.video_url}
-                                                playing
-                                                className="gdm-video-embed__player"
-                                                muted
-                                                loop
-                                                width="1920"
-                                                height="1080"
-                                                playsinline
-                                            />
-                                        </gdm-video-embed>
-                                        <figcaption className="caption">
-                                            <div className="caption__text glue-caption">
-                                                <p data-block-key="z0j7v"><strong>{item2.title} :</strong> {item2.description}
-                                                </p>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
+
+                            <Swiper
+                                modules={[Navigation, Pagination]}
+                                loop={true}
+                                className="mySwiper"
+                                navigation
+                            >
+
+                                {item1 && (
+                                    <SwiperSlide>
+                                        <div className="glue-carousel__item">
+                                            <figure>
+                                                <div
+                                                    className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item1.id}>
+
+
+                                                    <video
+                                                        src={item1.video_file.path}
+                                                        autoPlay
+                                                        className="gdm-video-embed__player"
+                                                        loop
+                                                        muted
+                                                        playsInline
+                                                        width="1920"
+                                                        height="1080"
+                                                    />
+                                                </div>
+                                                <figcaption className="caption">
+                                                    <div className="caption__text glue-caption">
+                                                        <p><strong>{item1.title} :</strong> {item1.description}</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </SwiperSlide>
                                 )}
-                            </div>
+
+                                {item2 && (
+                                    <SwiperSlide>
+                                        <div className="glue-carousel__item">
+
+                                            <figure >
+                                                <div
+                                                    className="gdm-video-embed gdm-video-embed--muted gdm-video-embed--background gdm-video-embed--fit-height gdm-video-embed--paused carousel__video" key={item2.id}>
+                                                    <video
+                                                        src={item2.video_file.path}
+                                                        autoPlay
+                                                        className="gdm-video-embed__player"
+                                                        loop
+                                                        muted
+                                                        playsInline
+                                                        width="1920"
+                                                        height="1080"
+                                                    />
+                                                </div>
+                                                <figcaption className="caption">
+                                                    <div className="caption__text glue-caption">
+                                                        <p data-block-key="z0j7v"><strong>{item2.title} :</strong> {item2.description}
+                                                        </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+
+                                        </div>
+                                    </SwiperSlide>
+                                )}
+
+                            </Swiper>
+
+
+
+
+
                         </div>
                     </div>
                     <div className="glue-carousel__navigation" aria-label="Choose item to display"></div>
-                </gdm-carousel>
+                </div>
 
             </div>
         </>

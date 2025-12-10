@@ -3957,7 +3957,6 @@ html {
 
 body {
     background: #fff;
-    color: #4B2760;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -12860,12 +12859,15 @@ body.glue-no-scroll {
 
 .button.glue-button--high-emphasis,
 .button.glue-button--high-emphasis:visited {
-    background: border-box var(--states-primary-enabled) center no-repeat;
+    background: border-box linear-gradient(90deg, #fbbc04 35%, #ff902a 90%) center no-repeat;
     border: 0;
-    color: var(--states-primary-on-enabled)
+    color: #fff;
+    cursor: pointer;
+    color: var(--surfaces-on-surface-variant);
+    transition: background-color .2s, box-shadow .2s, color .2s;
 }
 
-.button.glue-button--high-emphasis:active,
+/* .button.glue-button--high-emphasis:active,
 .button.glue-button--high-emphasis:hover {
     background-color: var(--states-primary-hovered);
     background-image: var(--states-primary-hovered)
@@ -12874,7 +12876,7 @@ body.glue-no-scroll {
 .button.glue-button--high-emphasis:active:after,
 .button.glue-button--high-emphasis:hover:after {
     background: var(--states-primary-hovered-overlay)
-}
+} */
 
 .button.glue-button--high-emphasis:focus {
     background-color: var(--states-primary-focused);
@@ -13008,7 +13010,7 @@ body.glue-no-scroll {
 }
 
 .caption__text {
-    color: var(--surfaces-on-surface-variant);
+    color: #5f6368;
     display: grid;
     gap: var(--spacer-1) 0;
     grid-column: var(--grid-column, 1/-1);
@@ -13133,7 +13135,7 @@ body.glue-no-scroll {
 }
 
 .glue-card .glue-card__inner {
-    background: var(--background);
+    background: #4B2760;
     overflow: hidden
 }
 
@@ -13158,13 +13160,13 @@ body.glue-no-scroll {
 }
 
 .glue-card .glue-card__content .glue-headline {
-    color: var(--surfaces-on-surface)
+    color: #fff;
 }
 
 .glue-card .glue-card__content .glue-caption,
 .glue-card .glue-card__content .glue-card__description,
 .glue-card .glue-card__content .glue-label {
-    color: var(--surfaces-on-surface-variant)
+    color: #9aa0a6;
 }
 
 .glue-card .glue-card__cta {
@@ -15104,12 +15106,12 @@ a:hover .willway-border {
 }
 
 .page-cover__title {
-    color: var(--text-primary);
-    transition: color var(--transition)
+    color: #fff;
+    transition: color 0s linear;
 }
 
 .page-cover__description {
-    color: var(--text-secondary);
+    color: #fff;
     max-width: 31.4375rem;
     width: 100%
 }
@@ -15755,7 +15757,7 @@ a:hover .willway-border {
 }
 
 .section-title__title {
-    color: var(--surfaces-surface-container);
+    color: #7c3da1;
     margin-bottom: var(--spacer-4);
     text-wrap: balance;
     transition: color var(--transition)
@@ -15766,7 +15768,7 @@ a:hover .willway-border {
 }
 
 .section-title__description p {
-    color: var(--text-secondary);
+    color: #5f6368;
     text-wrap: pretty;
     transition: color var(--transition)
 }

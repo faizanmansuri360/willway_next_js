@@ -507,11 +507,12 @@
 .willway-large-text__headline {
     background: var(--roles-primary-gradient);
     background-clip: text;
-    color: var(--surfaces-on-surface);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: -2em;
     padding-bottom: 2em;
     position: relative;
-    text-align: center
+    text-align: center;
 }
 
 .willway-large-text__headline p {

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import willway from "../../assets/willway.png"
-import navarimg from '../../assets/navbar.jpg';
+
 import { Link } from "react-router-dom"
 // import Search from "./Search"
 // import headerlogo from "../../assets/header-dog.webp";

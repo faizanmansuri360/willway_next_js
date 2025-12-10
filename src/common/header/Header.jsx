@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaBars, FaCross, FaSearch, FaTimes } from "react-icons/fa";
 import Search from "./Search";
-import willwayLogo from "@/assets/logo.png";
+import willwayLogo from "../../../public/assets/logo.png";
 import Image from "next/image";
 
 

@@ -1,9 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import "@/styles/willwayone.css";
 import "@/styles/willwaytwo.css";
 import "@/styles/willwaythree.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Providers from "./Providers.jsx";
 import Header from "@/common/header/Header";
 import Footer from "@/common/footer/Footer";
