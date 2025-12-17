@@ -23,7 +23,6 @@ const ProductData = () => {
                     <div className="article-cover__header">
                         <p className="article-cover__eyebrow glue-label">{product?.model}</p>
                         <h1 className="article-cover__title glue-headline glue-headline--headline-2">{product?.name}</h1>
-
                         <dl className="article-cover__meta">
                             <dd className="article-cover__date glue-label"><time>{new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</time></dd>
                             <dd className="article-cover__authors">

@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react"
 import { fetchProductBySearch } from "../../store/productSlice";
 import { Link, useNavigate } from "react-router-dom";

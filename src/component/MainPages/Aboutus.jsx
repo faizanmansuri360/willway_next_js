@@ -1,4 +1,4 @@
-import abouimg from '../../assets/navbar.jpg';
+"use client";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -17,8 +17,6 @@ const Aboutus = () => {
                     </div>
                 </div>
 
-
-
             </div>
 
 
@@ -32,7 +30,7 @@ const Aboutus = () => {
                         <figure>
                             <picture className="picture section-breaker__image">
                                 <img alt="" className="picture__image" height="640" loading="lazy"
-                                    src={abouimg}
+                                    src="/assets/navbar.jpg"
                                     width="640" />
                             </picture>
                         </figure>

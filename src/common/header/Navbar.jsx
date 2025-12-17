@@ -1,5 +1,5 @@
+"use client";
 import { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom"
 // import Search from "./Search"
 // import headerlogo from "../../assets/header-dog.webp";

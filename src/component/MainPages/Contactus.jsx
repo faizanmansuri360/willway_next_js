@@ -1,5 +1,5 @@
 import { FaAddressBook } from 'react-icons/fa';
-import contact from '../../assets/contact.jpg';
+import contact from '../../../public/assets/contact.jpg';
 
 const Contactus = () => {
     return (
@@ -28,12 +28,10 @@ const Contactus = () => {
                         <figure>
                             <picture className="picture section-breaker__image">
                                 <img alt="" className="picture__image" height="640" loading="lazy"
-                                    src={contact}
+                                    src="/assets/contact.jpg"
                                     width="640" />
                             </picture>
                         </figure>
-
-
 
                     </div>
                     <div className="glue-grid__col glue-grid__col--span-6 glue-grid__col--span-12-md section-breaker__content">

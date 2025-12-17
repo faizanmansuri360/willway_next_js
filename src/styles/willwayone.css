@@ -10495,7 +10495,7 @@ figure {
 .gdm-rich-text ol,
 .gdm-rich-text p,
 .gdm-rich-text ul {
-    color: var(--text-secondary);
+    color: #9aa0a6;
     transition: color var(--transition)
 }
 

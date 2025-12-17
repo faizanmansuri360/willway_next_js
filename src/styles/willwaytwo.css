@@ -5340,9 +5340,11 @@ header.glue-header.glue-header--no-cta {
     font-family: Google Sans Flex, Arial, Helvetica, sans-serif;
     transition: all .3s ease !important
 }
+
 nav.header.flyout.desktop.contained.show {
     background-color: var(--surface-colour);
 }
+
 .header-io-2025.open .header-bar__background:before,
 .header-io-2025.open:before,
 .header-io-2025.partial-show .header-bar__background:before,
@@ -5404,17 +5406,16 @@ nav.header.flyout.desktop.contained.show {
 .header-io-2025 .header-container .header__background.tablet.show {
     height: 100vh;
     opacity: 1;
-   
+
 }
 
 .header-io-2025 .header-container .header__background.desktop {
     display: none;
-    
-    
+
+
 }
-.flyout__container {
-    
-}
+
+.flyout__container {}
 
 @media(min-width:1280px) {
     .header-io-2025 .header-container .header__background.desktop {
@@ -5423,7 +5424,7 @@ nav.header.flyout.desktop.contained.show {
 }
 
 .header-io-2025 .header-container .header__background {
-    
+
     border-bottom: 2px solid var(--tonal-colour);
     left: 0;
     opacity: 0;
@@ -5796,7 +5797,7 @@ body:not(.gdm--io) .header-io-2025 {
 .site-switcher__title {
     color: #f1f3f4;
     font-family: "Josefin Sans", sans-serif;
-    font-feature-settings: "dlig"on;
+    font-feature-settings: "dlig" on;
     line-height: 100%;
     font-size: 30px;
     font-weight: bold;
@@ -6583,7 +6584,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-large__date {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-large__categories-wrapper {
@@ -6595,7 +6596,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-large__category {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-large__teams-wrapper {
@@ -6617,7 +6618,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-large__team-chip span {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-large__media {
@@ -6777,7 +6778,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-default__date {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-default__categories-wrapper {
@@ -6789,7 +6790,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-default__category {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-default__teams-wrapper {
@@ -6811,7 +6812,7 @@ body:not(.gdm--io) .site-switcher.show {
 
 .card-item-default__team-chip span {
     color: #9aa0a6;
-    font-feature-settings: "ss02"on
+    font-feature-settings: "ss02" on
 }
 
 .card-item-default__ctas-wrapper.contains-left-aligned {
@@ -7504,7 +7505,7 @@ body:not(.gdm--io) .site-switcher.show {
 }
 
 .section-title__description {
-    color: var(--surface-on-variant-colour)
+    color: #9aa0a6
 }
 
 .cta__wrapper {
@@ -8152,7 +8153,8 @@ body.gai--io .jumplinks-io-2025 {
 }
 
 .footer-main-links__border-top {
-    background: rgba(241, 243, 244, .08);;
+    background: rgba(241, 243, 244, .08);
+    ;
     height: 1px;
     left: 0;
     position: absolute;
@@ -8359,7 +8361,7 @@ body.gai--io .jumplinks-io-2025 {
 .gdm--io .gdm-sign-up__disclaimer p,
 .gdm--io .gdm-sign-up__title,
 .gdm--io .glue-caption {
-    color: var(--surface-on-variant-colour) !important;
+    color: #9aa0a6 !important;
     font-family: Google Sans Flex, Arial, Helvetica, sans-serif !important
 }
 
@@ -8419,7 +8421,7 @@ body.gai--io .jumplinks-io-2025 {
 .gdm--io .mdc-text-field,
 .gdm--io .mdc-text-field:not(.mdc-text-field--disabled),
 .gdm--io .mdc-text-field__input {
-    color: var(--surface-on-variant-colour) !important;
+    color: #9aa0a6 !important;
     font-family: Google Sans Flex, Arial, Helvetica, sans-serif !important
 }
 
@@ -8429,7 +8431,7 @@ body.gai--io .jumplinks-io-2025 {
 }
 
 .gdm--io .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
-    color: var(--surface-on-variant-colour) !important;
+    color: #9aa0a6 !important;
     opacity: 1 !important
 }
 
@@ -8478,7 +8480,7 @@ body.gai--io .jumplinks-io-2025 {
     background: var(--state-tonal-focused-colour);
     border: 1px solid var(--outline-colour);
     box-shadow: none;
-    color: var(--surface-on-variant-colour)
+    color: #9aa0a6
 }
 
 .willway-links__links a:focus-visible {
@@ -8651,8 +8653,12 @@ body.gai--io .jumplinks-io-2025 {
 
 .footer-wrapper {
     margin: 0 auto;
+
+    max-width: 1440px;
+}
+
+.footer-top {
     margin-top: var(--spacer-4xl);
-    max-width: 1440px
 }
 
 .footer-wrapper a:focus,

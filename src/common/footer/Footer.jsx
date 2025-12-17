@@ -1,12 +1,12 @@
+"use client";
 import React from "react"
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import whiteLogo from "../../../public/assets/willwayWhite.png";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="footer-top">
         <div className="footer-wrapper">
           <div className="block-social_links">
             <div className="footer-social-links__wrapper">
@@ -27,7 +27,7 @@ const Footer = () => {
               <div className="footer-main-links__border-top"></div>
               <div className="footer-main-links__title-wrapper">
                 <div className="site-switcher__bottom" >
-                  <Link className="site-switcher__title" href={"/"}><img src={whiteLogo} /></Link>
+                  <Link className="site-switcher__title" href={"/"}><img src="/assets/willwayWhite.png" /></Link>
                 </div>
                 <span className="gdm-heading-5">Build veterinary technology responsibly to benefit animal health.</span>
               </div>

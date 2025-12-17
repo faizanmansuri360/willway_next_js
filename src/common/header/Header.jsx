@@ -29,7 +29,6 @@ const Header = () => {
     });
   }, []);
 
-  console.log(categories, 'categoriescategoriescategories');
 
 
 
@@ -111,8 +110,8 @@ const Header = () => {
               <div className="flyout__main-menu-mobile gdm-grid__column--span-3 gdm-grid__column--span-4-md">
                 <nav className="main-menu__container">
                   <Link className="main-menu__label-tablet flyout__accordion__toggle gdm-text-call-to-action--nav open" href={"/"}>Home</Link>
-                  <Link className="main-menu__label-tablet flyout__accordion__toggle gdm-text-call-to-action--nav open" href={"/About"}>About</Link>
-                  <Link className="main-menu__label-tablet flyout__accordion__toggle gdm-text-call-to-action--nav open" href={"/Contact"}>Contact us</Link>
+                  <Link className="main-menu__label-tablet flyout__accordion__toggle gdm-text-call-to-action--nav open" href={"/about"}>About</Link>
+                  <Link className="main-menu__label-tablet flyout__accordion__toggle gdm-text-call-to-action--nav open" href={"/contact"}>Contact us</Link>
                 </nav>
 
               </div>
@@ -176,12 +175,12 @@ const Header = () => {
                       </div>
                       <div className="cta__wrapper normal-align cta__tonal-compact cta--icon">
                         <div className="cta__content-wrapper normal-align tonal-compact">
-                          <Link className="cta__label gdm-text-call-to-action--na" href={"/About"}>About</Link>
+                          <Link className="cta__label gdm-text-call-to-action--na" href={"/about"}>About</Link>
                         </div>
                       </div>
                       <div className="cta__wrapper normal-align cta__tonal-compact cta--icon">
                         <div className="cta__content-wrapper normal-align tonal-compact">
-                          <Link className="cta__label gdm-text-call-to-action--na" href={"/Contact"}>Contact us</Link>
+                          <Link className="cta__label gdm-text-call-to-action--na" href={"/contact"}>Contact us</Link>
                         </div>
                       </div>
                     </div>
@@ -241,13 +240,13 @@ const Header = () => {
             <div className="main-menu">
               <nav className="main-menu__container" aria-label="Main menu">
                 <Link className="main-menu__label gdm-text-call-to-action--nav" href={"/"}>Home</Link>
-                <Link className="main-menu__label gdm-text-call-to-action--nav" href={"/About"}>About</Link>
+                <Link className="main-menu__label gdm-text-call-to-action--nav" href={"/about"}>About</Link>
                 <div className="main-menu__label gdm-text-call-to-action--nav"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave} >
                   Categories
                 </div>
-                <Link className="main-menu__label gdm-text-call-to-action--nav" href={"/Contact"}>Contact us</Link>
+                <Link className="main-menu__label gdm-text-call-to-action--nav" href={"/contact"}>Contact us</Link>
               </nav>
             </div>
 
